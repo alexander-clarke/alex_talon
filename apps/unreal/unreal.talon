@@ -57,6 +57,13 @@ level to actor: key(m)
 
 prefix {user.unreal_prefixes}: insert(user.unreal_prefixes)
 
+# views
+view perspective: key(alt-g)
+view top: key(alt-j)
+view bottom: key(alt-shift-j)
+view left: key(alt-k)
+view right: key(alt-shift-k)
+
 # new blueprint plugin
 blueprint assist menu: key(ctrl-shift-f1)
 
