@@ -10,6 +10,7 @@ stop: mouse_click(4)
 parrot(cluck):key(k) 
 
 parrot(oo): key(m)
+parrot(shush): key(m)
 
 self: key(z)
 
@@ -20,7 +21,7 @@ self: key(z)
 
 (others|other): key(x)
 
-courier: key(f1)
+donkey: key(f1)
 
 (buy|by) (buy|by): key(f2)
 
@@ -61,7 +62,7 @@ red:
   key("{arrow_key}:30")
 
 big <user.arrow_key>: 
-  key("{arrow_key}:60")
+  key("{arrow_key}:90")
 
 tiny <user.arrow_key>: 
   key("{arrow_key}:15")  
