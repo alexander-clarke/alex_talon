@@ -28,6 +28,7 @@ parrot(cluck): key(e)
 [view] exhaust: key(x)
 
 # yes I know this is bad, but I couldn't be bothered to make a python file
+# for looking up and down in the map
 look up: 
   user.mouse_scroll_up(100)
   sleep(50ms)
@@ -70,6 +71,3 @@ go <user.arrow_keys>: user.move_cursor(arrow_keys)
 
 # means I can talk while playing the game which is pretty cool
 <phrase>: skip()
-
-settings():
-  setting_mouse_continuous_scroll_amount = 1
