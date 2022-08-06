@@ -50,7 +50,7 @@ toggle coordinate [space]: key(ctrl-`)
 
 reference viewer: key(alt-shift-b)
 
-commandline [open]: key(`)  
+(commandline|console) [open]: key(`)  
 
 actor to level: key(ctrl-m)
 level to actor: key(m)

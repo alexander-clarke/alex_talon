@@ -1,4 +1,4 @@
-from talon import Context, actions, app, Module
+from talon import Context, actions, app, Module, cron
 import time
 import asyncio
 ctx = Context()
@@ -40,11 +40,10 @@ ctx.lists["user.unreal_prefixes"] = {
 class Actions:
   def find_file(file_name: str):
     """Finds a file"""
-    asyncio.run(find_file_async(file_name))
+    actions.key("ctrl-p")
+    if file_name:
+      
+      def insert_file_name_text():
+        actions.insert(file_name)
 
-
-async def find_file_async(file_name: str):
-  actions.key("ctrl-p")
-  if (file_name):
-    await asyncio.sleep(0.1)
-    actions.insert(file_name)
+      cron.after("100ms", insert_file_name_text)
