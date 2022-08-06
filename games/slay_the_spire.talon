@@ -7,10 +7,9 @@ and win.title: Slay the Spire
 os: windows
 and app.exe: javaw.exe
 and win.title: Slay the Spire
-
 -
 
-^[card] <number_small>$: insert(number_small)
+^[card] <number_small>$: key("{number_small}")
 
 confirm card: key(enter)
 
