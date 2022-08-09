@@ -1,4 +1,4 @@
-from talon import Module
+from talon import Module, actions
 from phue import Bridge
 
 mod = Module()
@@ -17,11 +17,11 @@ if bridge_ip.get() is not None:
 class HueActions:
   def lights_on():
     """"""
-    HueActions.lights_onoff(True)
+    actions.user.lights_onoff(True)
     
   def lights_off():
     """"""
-    HueActions.lights_onoff(False)
+    actions.user.lights_onoff(False)
   
   def lights_onoff(newstate: bool):
     """"""
