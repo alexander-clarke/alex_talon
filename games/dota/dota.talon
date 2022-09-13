@@ -7,16 +7,19 @@ and app.exe: dota2.exe
 -
 stop: 
   # mouse_click()
-  key(i) 
+  mouse_click(3) 
+
+parrot(shush): mouse_click(3)
+parrot(ch): mouse_click(3)
 
 parrot(cluck):key(m) 
 
 parrot(oo): mouse_click(4)
-parrot(shush): key(m)
+parrot(buzz): mouse_click(4)
 
 ping: 
   key(alt:down)
-  sleep(16ms)
+  sleep(32ms)
   mouse_click(0)
   sleep(16ms)
   key(alt:up)
@@ -24,14 +27,20 @@ ping:
 self: key(z)
 
 (sent|cent): 
+  key(z:up)
   key(z)
-  sleep(10ms)
+  sleep(16ms)
   key(z)
 
 follow:
+  key(z:up)
+  key(z)
+  sleep(16ms)
   key(z:down)
   
 (others|other): key(x)
+
+all: key(c)
 
 donkey: key(f1)
 
@@ -47,7 +56,7 @@ quick:
   mouse_click(0)
   sleep(10ms)
   key(shift:up)
-quick add: 
+quick (add|ad|at): 
   key(shift:down)
   key(ctrl:down)
   sleep(10ms)
@@ -68,28 +77,66 @@ each:
 red:
   key(alt-r)
 
+drum:
+  key(alt-d)
+
+vest:
+  key(v)
+
 ^one$:
   key(1)
 
-(tp|teepee): key(t)
+^one one$:
+  key(1)
+  key(1)
+
+^two$:
+  key(alt-2)
+
+space:
+  key(space)
+
+arch: key(a)
+
+sun: key(s)
+
+taunt:
+  key(f10)
+
+(tp|teepee|tippy): key(t)
+
+score: user.key_hold("`", "1500ms")
+
+sticky: key(f7)
 
 # skill: key(u)
 
+curse:
+  # mouse_click(2, down = True)
+  user.hold_middle_mouse()
+  sleep(16ms)
+  user.center_cursor_position()
+  sleep(16ms)
+  user.release_middle_mouse()
+  # mouse_click(2, down = False)
+
 <user.arrow_key>:
-  user.key_hold("{arrow_key}", "320ms")
+  user.key_hold("{arrow_key}", "96ms")
 
-big <user.arrow_key>: 
-  key("{arrow_key}:90")
+# <user.arrow_key> er:
+#   user.key_hold("{arrow_key}", "640ms")
 
-tiny <user.arrow_key>: 
-  key("{arrow_key}:15")  
-  # sleep(50ms)
-  # key("{arrow_key}:up")
+be <user.arrow_key>: 
+  user.key_hold("{arrow_key}", "256ms")
+
+be <user.arrow_key> <user.arrow_key>: 
+  user.key_hold("{arrow_key_1}", "256ms")
+  user.key_hold("{arrow_key_2}", "256ms")
 
 (days|gaze):
   user.dota_toggle_gaze()
 
-flame:
+keyboard:
   key(shift-enter)
   sleep(10ms)
   insert("i'm not even touching the keyboard lol")
@@ -103,6 +150,9 @@ voice:
   sleep(10ms)
   key(enter)
 
+injury explain:
+  user.dota_send_chat_message("hi due to rsi I am unable to use my hands to play and instead use a mixture of eye tracking and voice commands, which doesn't always work so apologies in advance")
+
 # fault:
 #   key(shift-enter)
 #   sleep(10ms)
@@ -113,4 +163,4 @@ voice:
 <phrase>:skip()
  
 settings():
-  speech.timeout = 0.05
+  speech.timeout = 0.020

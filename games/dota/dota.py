@@ -112,3 +112,26 @@ class dota_actions:
     if key not in key_holders:    
       key_holders[key] = KeyHolder(key)
     key_holders[key].key_hold(time)
+    
+  def hold_middle_mouse():
+    """"""
+    ctrl.mouse_click(2, down = True, up=False)
+    
+    
+  def release_middle_mouse():
+    """"""
+    ctrl.mouse_click(2, up = True, down=False)
+    
+  def center_cursor_position():
+    """"""
+    screen_center = ui.screens()[0].rect.center
+    ctrl.mouse_move(screen_center.x, screen_center.y)
+    # ctrl.mouse_click(2, up = True)
+    
+  def dota_send_chat_message(message: str, destination: str = None):
+    """"""
+    actions.key("enter")
+    actions.sleep("10ms")
+    actions.insert(message)
+    actions.sleep("10ms")
+    actions.key("enter")
