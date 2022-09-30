@@ -72,7 +72,7 @@ open window: key(ctrl-shift-k)
 node new: key(tab)
 [toggle] context sensitive: key(ctrl-t)
 
-(link to pin|pin connect): key(ctrl-shift-q)
+(link to pin|pin (connect|link)): key(ctrl-shift-q)
 ((link (in|to) wire)|(node connect)): key(ctrl-q)
 
 node delete and link: key(shift-delete)

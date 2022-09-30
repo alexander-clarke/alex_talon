@@ -32,6 +32,7 @@ ctx.lists["user.unreal_prefixes"] = {
   "Niagara system": "NS_",
   "curve vector": "CV_",
   "curve float": "CF_",
+  "editor utility": "EU_",
   # project specific
   "ziggy dialog tree": "ZDT_",
 }
