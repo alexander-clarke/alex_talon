@@ -103,6 +103,9 @@ sun: key(s)
 taunt:
   key(f10)
 
+# line:
+#   user.key_hold("k", "1000ms")
+
 (tp|teepee|tippy): key(t)
 
 score: user.key_hold("`", "1500ms")
@@ -149,6 +152,9 @@ voice:
   insert("i'm using voice controls")
   sleep(10ms)
   key(enter)
+
+ge ge:
+  user.dota_send_chat_message("gg", True)
 
 injury explain:
   user.dota_send_chat_message("hi due to rsi I am unable to use my hands to play and instead use a mixture of eye tracking and voice commands, which doesn't always work so apologies in advance")

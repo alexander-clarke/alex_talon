@@ -128,9 +128,12 @@ class dota_actions:
     ctrl.mouse_move(screen_center.x, screen_center.y)
     # ctrl.mouse_click(2, up = True)
     
-  def dota_send_chat_message(message: str, destination: str = None):
+  def dota_send_chat_message(message: str, all: bool = False):
     """"""
-    actions.key("enter")
+    if all:
+      actions.key("shift-enter")
+    else:
+      actions.key("enter")
     actions.sleep("10ms")
     actions.insert(message)
     actions.sleep("10ms")
