@@ -1,7 +1,9 @@
-from talon import Module, actions
+from talon import Module, actions, Context, app
 from phue import Bridge
 
+
 mod = Module()
+ctx = Context()
 
 bridge_ip = mod.setting(
   "hue_bridge_ip",
@@ -9,9 +11,16 @@ bridge_ip = mod.setting(
   None,
   "The IP for the hue bridge"
 )
-bridge =None
-if bridge_ip.get() is not None:
-  bridge = Bridge(bridge_ip.get())
+
+bridge = None
+
+def on_ready():
+  if bridge_ip.get() is not None:
+    global bridge
+    bridge = Bridge(bridge_ip.get())
+    print("Found bridge in startup")
+    
+app.register("ready", on_ready)
 
 @mod.action_class
 class HueActions:
