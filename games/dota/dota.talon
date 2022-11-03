@@ -6,16 +6,15 @@ and app.exe: dota2.exe
 
 -
 stop: 
-  # mouse_click()
   mouse_click(3) 
 
 parrot(shush): mouse_click(3)
 parrot(ch): mouse_click(3)
 
-parrot(cluck):key(m) 
+parrot(cluck): key(q)
 
 parrot(oo): mouse_click(4)
-parrot(buzz): mouse_click(4)
+parrot(buzz): mouse_click(1)
 
 ping: 
   key(alt:down)
@@ -40,9 +39,9 @@ follow:
   
 (others|other): key(x)
 
-all: key(c)
+(tote|tot|tort): key(c)
 
-donkey: key(f1)
+donkey:   key(f1)
 
 (buy|by) (buy|by): key(f2)
 
@@ -71,6 +70,12 @@ quench:
 (whale|well):
   key(alt-w)
 
+parrot(tut):
+  key(w)
+
+parrot(hmm):
+  key(e) 
+
 each:
   key(alt-e)
 
@@ -78,7 +83,10 @@ red:
   key(alt-r)
 
 drum:
-  key(alt-d)
+  key(d)
+
+fine:
+  key(f)
 
 vest:
   key(v)
@@ -108,11 +116,14 @@ taunt:
 
 (tp|teepee|tippy): key(t)
 
-score: user.key_hold("`", "1500ms")
+score: user.key_hold("`", "2000ms")
 
 sticky: key(f7)
 
 # skill: key(u)
+
+drag: user.mouse_drag(0)
+(dragend|dragon): user.mouse_drag_end(0)
 
 curse:
   # mouse_click(2, down = True)
@@ -140,24 +151,34 @@ be <user.arrow_key> <user.arrow_key>:
   user.dota_toggle_gaze()
 
 keyboard:
-  key(shift-enter)
-  sleep(10ms)
-  insert("i'm not even touching the keyboard lol")
-  sleep(10ms)
-  key(enter)
+  user.dota_send_chat_message("i'm not even touching the keyboard lol", 1)
 
 voice:
-  key(shift-enter)
-  sleep(10ms)
-  insert("i'm using voice controls")
-  sleep(10ms)
-  key(enter)
+  user.dota_send_chat_message("i'm using voice controls!", 1)
 
 ge ge:
-  user.dota_send_chat_message("gg", True)
+  user.dota_send_chat_message("gg", 1)
 
 injury explain:
   user.dota_send_chat_message("hi due to rsi I am unable to use my hands to play and instead use a mixture of eye tracking and voice commands, which doesn't always work so apologies in advance")
+
+how I play:
+  user.dota_send_chat_message("due to rsi I am unable to use my hands to play and instead use a mixture of eye tracking and voice commands", 1)
+
+(geback|get back|ge back): 
+  key(b)
+
+(push):
+  key([)
+
+well played:
+  key(,)
+
+hero missing:
+  key(.)
+
+laugh:
+  user.dota_send_chat_message("/laugh")
 
 # fault:
 #   key(shift-enter)
