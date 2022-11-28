@@ -48,12 +48,14 @@ save all:
 
 toggle coordinate [space]: key(ctrl-`)
 
-reference viewer: key(alt-shift-b)
+(reference viewer|go usage): key(alt-shift-r)
 
 (commandline|console) [open]: key(`)  
 
 actor to level: key(ctrl-m)
 level to actor: key(m)
+
+build lighting: key(ctrl-shift-;)
 
 prefix {user.unreal_prefixes}: insert(user.unreal_prefixes)
 
@@ -69,7 +71,11 @@ blueprint assist menu: key(ctrl-shift-f1)
 
 open window: key(ctrl-shift-k)
 
-node new: key(tab)
+(node new|make node) [<phrase>]: 
+  key(tab)
+  sleep("150ms")
+  insert(user.phrase or "")
+
 [toggle] context sensitive: key(ctrl-t)
 
 (link to pin|pin (connect|link)): key(ctrl-shift-q)
@@ -106,3 +112,16 @@ look <user.arrow_key>: key("shift-{arrow_key}")
 node <user.arrow_key>: key("ctrl-{arrow_key}")
 pin <user.arrow_key>: key("{arrow_key}")
 swap <user.arrow_key>: key("ctrl-shift-{arrow_key}")
+
+# material editor
+material vector:
+  key(3:down)
+  sleep(200ms)
+  mouse_click(0)
+  key(3:up)
+
+material scalar:
+  key(1:down)
+  sleep(200ms)
+  mouse_click(0)
+  key(1:up)

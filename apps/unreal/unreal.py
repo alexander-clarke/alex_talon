@@ -29,6 +29,7 @@ ctx.lists["user.unreal_prefixes"] = {
   
   # nonstandard
   "material": "MM_",
+  "material function": "MF_",
   "Niagara system": "NS_",
   "curve vector": "CV_",
   "curve float": "CF_",
