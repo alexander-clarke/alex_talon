@@ -1,3 +1,3 @@
 os: windows
 -
-hints: key(ctrl-alt-shift-m)
+hints: key(ctrl-alt-shift-p)
