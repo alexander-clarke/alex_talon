@@ -147,9 +147,6 @@ be <user.arrow_key> <user.arrow_key>:
   user.key_hold("{arrow_key_1}", "256ms")
   user.key_hold("{arrow_key_2}", "256ms")
 
-(days|gaze):
-  user.dota_toggle_gaze()
-
 keyboard:
   user.dota_send_chat_message("i'm not even touching the keyboard lol", 1)
 
