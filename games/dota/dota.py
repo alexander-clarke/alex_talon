@@ -134,7 +134,7 @@ class dota_actions:
       actions.key("shift-enter")
     else:
       actions.key("enter")
-    actions.sleep("16ms")
+    actions.sleep("32ms")
     actions.insert(message)
-    actions.sleep("16ms")
+    actions.sleep("32ms")
     actions.key("enter")

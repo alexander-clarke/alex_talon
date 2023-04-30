@@ -13,7 +13,7 @@ parrot(ch): mouse_click(3)
 
 parrot(cluck): key(q)
 
-parrot(oo): mouse_click(4)
+parrot(oo): key(r)
 parrot(buzz): mouse_click(1)
 
 ping: 
@@ -73,8 +73,8 @@ quench:
 parrot(tut):
   key(w)
 
-parrot(hmm):
-  key(e) 
+# parrot(hmm):
+  # key(e) 
 
 each:
   key(alt-e)
@@ -153,7 +153,16 @@ keyboard:
 voice:
   user.dota_send_chat_message("i'm using voice controls!", 1)
 
-ge ge:
+stupid:
+  user.dota_send_chat_message("i'm with stupid", 1)
+
+idiot:
+  user.dota_send_chat_message("i'm actually just an idiot", 1)
+
+question mark:
+  user.dota_send_chatqq_message("?", 1)
+
+(ge ge|gigi):
   user.dota_send_chat_message("gg", 1)
 
 injury explain:
@@ -176,6 +185,11 @@ hero missing:
 
 laugh:
   user.dota_send_chat_message("/laugh")
+  sleep(10ms)
+  key(escape)
+
+roll for it:
+  user.dota_send_chat_message("/roll")
 
 # fault:
 #   key(shift-enter)
@@ -184,7 +198,15 @@ laugh:
 #   sleep(10ms)
 #   key(enter)
 
+soundboard:
+  key(ctrl-alt-shift-d:down)
+  sleep(1000ms)
+  key(ctrl-alt-shift-d:up)
+
+tab:
+  key(tab)
+
 <phrase>:skip()
- 
+  
 settings():
-  speech.timeout = 0.020
+  speech.timeout = 0.010
