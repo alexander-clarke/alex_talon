@@ -22,6 +22,7 @@ ctx.lists["user.unreal_prefixes"] = {
   "blueprint": "BP_",
   "widget blueprint": "WBP_",
   "animation blueprint": "ABP_",
+  "behavior tree": "BT_",
   "static mesh": "SM_",
   "skeletal mesh": "SK_",
   "texture": "T_",

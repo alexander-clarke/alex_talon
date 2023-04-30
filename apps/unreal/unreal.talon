@@ -46,6 +46,9 @@ save all:
   sleep(200ms)
   key(ctrl-s)
 
+open level:
+  key(ctrl-o)
+
 toggle coordinate [space]: key(ctrl-`)
 
 (reference viewer|go usage): key(alt-shift-r)
@@ -66,20 +69,29 @@ view bottom: key(alt-shift-j)
 view left: key(alt-k)
 view right: key(alt-shift-k)
 
-# new blueprint plugin
+##########
+# All commands below are from the blueprint assist plugin
+##########
 blueprint assist menu: key(ctrl-shift-f1)
 
 open window: key(ctrl-shift-k)
+switch workflow: key(alt-o)
+
+[<phrase>] [search] hunt:
+  key(ctrl-alt-f)
+  sleep(100ms)
+  insert(phrase or "")
 
 (node new|make node) [<phrase>]: 
   key(tab)
-  sleep("150ms")
-  insert(user.phrase or "")
+  sleep(100ms)
+  insert(phrase or "")
 
 [toggle] context sensitive: key(ctrl-t)
 
 (link to pin|pin (connect|link)): key(ctrl-shift-q)
 ((link (in|to) wire)|(node connect)): key(ctrl-q)
+(connect|link) menu: key(ctrl-l)
 
 node delete and link: key(shift-delete)
 
