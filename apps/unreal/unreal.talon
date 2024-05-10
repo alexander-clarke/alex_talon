@@ -53,6 +53,8 @@ toggle coordinate [space]: key(ctrl-`)
 
 (reference viewer|go usage): key(alt-shift-r)
 
+size map: key(alt-shift-m)
+
 (commandline|console) [open]: key(`)  
 
 actor to level: key(ctrl-m)
@@ -68,6 +70,8 @@ view top: key(alt-j)
 view bottom: key(alt-shift-j)
 view left: key(alt-k)
 view right: key(alt-shift-k)
+view front: key(alt-h)
+view back: key(alt-shift-h)
 
 ##########
 # All commands below are from the blueprint assist plugin
@@ -86,6 +90,9 @@ switch workflow: key(alt-o)
   key(tab)
   sleep(100ms)
   insert(phrase or "")
+
+node replace:
+  key(ctrl-h)
 
 [toggle] context sensitive: key(ctrl-t)
 
@@ -137,3 +144,6 @@ material scalar:
   sleep(200ms)
   mouse_click(0)
   key(1:up)
+
+escape repeater:
+  key(escape:500)

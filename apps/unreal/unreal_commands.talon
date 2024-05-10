@@ -11,3 +11,5 @@ pause: "Pause\n"
 
 (stat|state) start file: "stat startfile\n"
 (stat|state) stop file: "stat stopfile\n"
+
+force lod: "r.ForceLod 4"
