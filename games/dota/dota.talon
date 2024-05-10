@@ -11,7 +11,9 @@ stop:
 parrot(shush): mouse_click(3)
 parrot(ch): mouse_click(3)
 
-parrot(cluck): key(q)
+parrot(cluck): user.key_hold("q", "450ms")
+
+# parrot(cluck): key(q:toggle)
 
 parrot(oo): key(r)
 parrot(buzz): mouse_click(1)
@@ -76,13 +78,16 @@ parrot(tut):
 # parrot(hmm):
   # key(e) 
 
+deck(pedal_left):
+  key(e)
+
 each:
   key(alt-e)
 
 red:
   key(alt-r)
 
-drum:
+(dish|drum|dash):
   key(d)
 
 fine:
@@ -99,24 +104,35 @@ vest:
   key(1)
 
 ^two$:
-  key(alt-2)
+  key(alt-2)f
 
-space:
+deck(pedal_middle):
+  key(space)
+
+deck(peddal_right):
+  key(home)
+
+cap:
   key(space)
 
 arch: key(a)
 
-sun: key(s)
+dot: key(s)
+
 
 taunt:
-  key(f10)
+  key(f11)
 
 # line:
 #   user.key_hold("k", "1000ms")
 
 (tp|teepee|tippy): key(t)
 
-score: user.key_hold("`", "2000ms")
+cored: user.key_hold("`", "4000ms")
+
+minimap up: key([:down)
+minimap down: key([:up)
+minimap: user.key_hold("[", "1000ms")
 
 sticky: key(f7)
 
@@ -160,7 +176,7 @@ idiot:
   user.dota_send_chat_message("i'm actually just an idiot", 1)
 
 question mark:
-  user.dota_send_chatqq_message("?", 1)
+  user.dota_send_chat_message("?", 1)
 
 (ge ge|gigi):
   user.dota_send_chat_message("gg", 1)
@@ -170,6 +186,10 @@ injury explain:
 
 how I play:
   user.dota_send_chat_message("due to rsi I am unable to use my hands to play and instead use a mixture of eye tracking and voice commands", 1)
+
+roshan:
+  user.dota_send_chat_message("roshan", 0)
+
 
 (geback|get back|ge back): 
   key(b)
@@ -185,7 +205,7 @@ hero missing:
 
 laugh:
   user.dota_send_chat_message("/laugh")
-  sleep(10ms)
+  sleep(50ms)
   key(escape)
 
 roll for it:
@@ -205,6 +225,11 @@ soundboard:
 
 tab:
   key(tab)
+
+# quiz|quas|qwas: key(q)
+# wax|wex: key(w)
+# exhort|exort: key(e)
+# invoke: key(r)
 
 <phrase>:skip()
   
