@@ -1,6 +1,6 @@
 not mode: sleep
 -
-^game mode$:
+^gamer mode$:
     mode.disable("sleep")
     mode.disable("command")
     mode.enable("user.game")
