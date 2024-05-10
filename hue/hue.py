@@ -37,3 +37,6 @@ class HueActions:
     if bridge is not None:
       for light in bridge.lights:
         light.on = newstate
+    else:
+      print("No bridge")    
+    
