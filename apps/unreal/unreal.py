@@ -9,6 +9,10 @@ os: windows
 and app.name: /UE4/
 os: windows
 and app.exe: /UE4Editor/
+os: windows
+and app.name: UnrealEditor
+os: windows
+and app.exe: unrealeditor.exe
 """
 
 ctx.matches = r"""
