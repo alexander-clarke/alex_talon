@@ -92,6 +92,7 @@ red:
 
 fine:
   key(f)
+  # key_hold("f","300ms")
 
 vest:
   key(v)
@@ -104,7 +105,7 @@ vest:
   key(1)
 
 ^two$:
-  key(alt-2)f
+  key(alt-2)
 
 deck(pedal_middle):
   key(space)
@@ -204,12 +205,13 @@ hero missing:
   key(.)
 
 laugh:
-  user.dota_send_chat_message("/laugh")
-  sleep(50ms)
-  key(escape)
+  key(keypad_4)
 
 roll for it:
   user.dota_send_chat_message("/roll")
+
+good luck have fun:
+  user.dota_send_chat_message("glhf",  1)
 
 # fault:
 #   key(shift-enter)
@@ -225,6 +227,20 @@ soundboard:
 
 tab:
   key(tab)
+
+sorry:
+  key(keypad_1  )
+
+monkey laugh:
+  key(keypad_2)
+
+oops:
+  key(keypad_3)
+
+pleasecare:
+  key(l)
+
+
 
 # quiz|quas|qwas: key(q)
 # wax|wex: key(w)
