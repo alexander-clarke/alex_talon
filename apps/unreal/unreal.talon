@@ -26,8 +26,12 @@ step into:
 step over:
   key(f10)
 
-tab close:
+tab close [major]: 
   key(ctrl-f4)
+
+# not default shortcut
+tab close minor:
+  key(ctrl-shift-f4)
 
 browse [to]:
   key(ctrl-b)
@@ -78,6 +82,9 @@ view back: key(alt-shift-h)
 ##########
 blueprint assist menu: key(ctrl-shift-f1)
 
+tab open: key(ctrl-shift-tab)
+blueprint tab forwards: key(alt-end)
+blueprint tab backwards: key(alt-home)
 open window: key(ctrl-shift-k)
 switch workflow: key(alt-o)
 
