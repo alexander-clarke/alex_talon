@@ -54,3 +54,8 @@ class Actions:
         actions.insert(file_name)
 
       cron.after("100ms", insert_file_name_text)
+
+  def arrow_key_sequence_with_modifiers(arrows: str, modifier: str =  ""):
+    ''''''
+    for d in arrows.split():
+      actions.key(modifier + d)

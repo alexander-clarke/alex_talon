@@ -107,7 +107,7 @@ node replace:
 ((link (in|to) wire)|(node connect)): key(ctrl-q)
 (connect|link) menu: key(ctrl-l)
 
-node delete and link: key(shift-delete)
+[node] (chuck|delete) [and] keep: key(shift-delete)
 
 node disconnect: key(ctrl-d)
 pin disconnect: key(d)
@@ -134,10 +134,13 @@ format: key(f)
 format selection: key(shift-f)
 format all: key(ctrl-r)
 
-look <user.arrow_key>: key("shift-{arrow_key}")
-node <user.arrow_key>: key("ctrl-{arrow_key}")
-pin <user.arrow_key>: key("{arrow_key}")
-swap <user.arrow_key>: key("ctrl-shift-{arrow_key}")
+variable split: key(ctrl-shift-v)
+variable merge: key(alt-shift-m)
+
+look <user.arrow_keys>: user.arrow_key_sequence_with_modifiers(arrow_keys, "shift-")
+node <user.arrow_keys>: user.arrow_key_sequence_with_modifiers(arrow_keys, "ctrl-")
+pin <user.arrow_keys>: user.arrow_key_sequence_with_modifiers(arrow_keys)
+swap <user.arrow_keys>: user.arrow_key_sequence_with_modifiers(arrow_keys, "ctrl-shift-")
 
 # material editor
 material vector:
