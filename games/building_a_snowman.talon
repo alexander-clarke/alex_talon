@@ -3,7 +3,6 @@ os: windows
 and app.name: Snowman.exe
 os: windows
 and app.exe: Snowman.exe
-mod
 -
 
 <user.arrow_keys>: user.move_cursor(arrow_keys)
