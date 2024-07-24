@@ -83,8 +83,8 @@ view back: key(alt-shift-h)
 blueprint assist menu: key(ctrl-shift-f1)
 
 tab open: key(ctrl-shift-tab)
-blueprint tab forwards: key(alt-end)
-blueprint tab backwards: key(alt-home)
+[blueprint] tab forwards: key(alt-end)
+[blueprint] tab backwards: key(alt-home)
 open window: key(ctrl-shift-k)
 switch workflow: key(alt-o)
 
@@ -108,6 +108,9 @@ node replace:
 (connect|link) menu: key(ctrl-l)
 
 [node] (chuck|delete) [and] keep: key(shift-delete)
+
+[node] toggle (purity|pure): key(shift-alt-g)
+[node] toggle [advanced] display: key(alt-ctrl-a)
 
 node disconnect: key(ctrl-d)
 pin disconnect: key(d)
