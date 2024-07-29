@@ -1,0 +1,11 @@
+list: user.p4_commands
+-
+client
+add
+edit
+delete
+opened
+update
+resolve
+submit
+revert
