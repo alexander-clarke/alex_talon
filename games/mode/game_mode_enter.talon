@@ -1,4 +1,4 @@
-not mode: sleep
+mode: command
 -
 ^gamer mode$:
     mode.disable("sleep")
