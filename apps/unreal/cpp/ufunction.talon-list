@@ -1,0 +1,16 @@
+list: user.unreal_ufunction_specifiers
+-
+callable: BlueprintCallable
+pure: BlueprintPure
+cosmetic: BlueprintCosmetic
+implementable: BlueprintImplementableEvent
+authority: BlueprintAuthorityOnly
+native: BlueprintNativeEvent
+Client
+Server
+Category
+NetMulticast
+Reliable
+Unreliable
+CustomThunk
+Exec
