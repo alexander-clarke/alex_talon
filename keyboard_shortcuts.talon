@@ -3,8 +3,8 @@ mode:all
 
 key(f10): speech.toggle()
 key(f13:down):
-  user.discord_global_mute()
   speech.toggle()
+  user.discord_global_mute()
   
 key(ctrl-alt-shift-1):
   user.audio_default_switch("Wired Interface Output")

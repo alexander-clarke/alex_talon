@@ -1,0 +1,42 @@
+list: user.unreal_uproperty_specifiers
+-
+advanced display: AdvancedDisplay
+asset registry searchable: AssetRegistrySearchable
+blueprint assignable: BlueprintAssignable
+blueprint authority only: BlueprintAuthorityOnly
+blueprint callable: BlueprintCallable
+blueprint getter: BlueprintGetter
+blueprint read only: BlueprintReadOnly
+blueprint read write: BlueprintReadWrite
+blueprint setter: BlueprintSetter
+category: Category
+config: Config
+duplicate transient: DuplicateTransient
+edit anywhere: EditAnywhere
+edit defaults only: EditDefaultsOnly
+edit fixed size: EditFixedSize
+edit inline: EditInline
+edit instance only: EditInstanceOnly
+export: Export
+global config: GlobalConfig
+instanced: Instanced
+interp: Interp
+localized: Localized
+native: Native
+no clear: NoClear
+no export: NoExport
+non PIE duplicate transient: NonPIEDuplicateTransient
+non transactional: NonTransactional
+not replicated: NotReplicated
+replicated: Replicated
+replicated using: ReplicatedUsing
+rep retry: RepRetry
+save game: SaveGame
+serialize text: SerializeText
+skip serialization: SkipSerialization
+simple display: SimpleDisplay
+text export transient: TextExportTransient
+transient: Transient
+visible anywhere: VisibleAnywhere
+visible defaults only: VisibleDefaultsOnly
+visible instance only: VisibleInstanceOnly
