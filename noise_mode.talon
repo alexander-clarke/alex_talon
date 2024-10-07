@@ -1,6 +1,6 @@
 -
 noise (on|enable):
-  mode.enable("noise")
+  mode.enable("user.speech_noise")
 
 noise (off|disable):
-  mode.disable("noise")
+  mode.disable("user.speech_noise")
