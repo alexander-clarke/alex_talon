@@ -3,8 +3,8 @@ mode:all
 
 key(f10): speech.toggle()
 key(f13:down):
-  user.discord_global_mute()
   speech.toggle()
+  user.discord_global_mute()
   
 ^talon switch$:
   user.discord_global_mute()

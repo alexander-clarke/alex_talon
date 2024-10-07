@@ -31,9 +31,9 @@ ctx.lists["user.unreal_prefixes"] = {
   "skeletal mesh": "SK_",
   "texture": "T_",
   "material instance": "MI_",
+  "material": "M_",
   
   # nonstandard
-  "material": "MM_",
   "material function": "MF_",
   "Niagara system": "NS_",
   "curve vector": "CV_",

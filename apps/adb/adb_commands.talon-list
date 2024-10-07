@@ -1,0 +1,44 @@
+list: user.adb_commands
+-
+devices
+help
+version
+connect
+disconnect
+pair
+forward
+reverse
+mdns
+push
+pull
+sync
+shell
+emu
+install
+install multiple: install-multiple
+install multi package: install-multi-package
+uninstall
+bugreport
+jdwp
+logcat
+disabled verity: disable-verity
+enable verity: enable-verity
+keygen
+wait-for
+get state: get-state
+get serial number: get-serialno
+get dev path: get-devpath
+remount
+reboot
+sideload
+root
+unroot
+usb
+tcpip
+start server: start-server
+kill server: kill-server
+reconnect
+reconnect device
+reconnect offline
+attach
+detach
