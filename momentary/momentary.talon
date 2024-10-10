@@ -1,3 +1,3 @@
 mode: sleep
 -
-^listen <phrase>$: user.momentary()
+^talon <phrase>$: user.momentary()

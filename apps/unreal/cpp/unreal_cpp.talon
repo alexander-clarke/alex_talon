@@ -4,7 +4,7 @@ code.language: c
 state you property:
   insert("UPROPERTY(BlueprintReadWrite, EditAnywhere)")
 
-state you function <user.uproperty_specifiers>:
+state you property <user.uproperty_specifiers>:
   user.insert_between("UPROPERTY({uproperty_specifiers}", ")")
 
 insert you property <user.uproperty_specifiers>:
