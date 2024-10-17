@@ -66,6 +66,8 @@ level to actor: key(m)
 
 build lighting: key(ctrl-shift-;)
 
+select all of class: key(ctrl-shift-a)
+
 prefix {user.unreal_prefixes}: insert(user.unreal_prefixes)
 
 # views
@@ -104,7 +106,7 @@ node replace:
 [toggle] context sensitive: key(ctrl-t)
 
 (link to pin|pin (connect|link)): key(ctrl-shift-q)
-((link (in|to) wire)|(node connect)): key(ctrl-q)
+((link (in|to) wire)|(node (connect|link))): key(ctrl-q)
 (connect|link) menu: key(ctrl-l)
 
 [node] (chuck|delete) [and] keep: key(shift-delete)
