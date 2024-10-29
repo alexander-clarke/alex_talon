@@ -1,0 +1,9 @@
+list: user.unreal_delegate_param_count
+-
+one: _OneParam
+two: _TwoParams
+three: _ThreeParams
+four: _FourParams
+five: _FiveParams
+six: _SixParams
+seven: _SevenParams

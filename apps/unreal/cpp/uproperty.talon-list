@@ -3,12 +3,19 @@ list: user.unreal_uproperty_specifiers
 advanced display: AdvancedDisplay
 asset registry searchable: AssetRegistrySearchable
 blueprint assignable: BlueprintAssignable
+assignable: BlueprintAssignable
 blueprint authority only: BlueprintAuthorityOnly
+authority only: BlueprintAuthorityOnly
 blueprint callable: BlueprintCallable
+callable: BlueprintCallable
 blueprint getter: BlueprintGetter
+getter: BlueprintGetter
 blueprint read only: BlueprintReadOnly
+read only: BlueprintReadOnly
 blueprint read write: BlueprintReadWrite
+read write: BlueprintReadWrite
 blueprint setter: BlueprintSetter
+setter: BlueprintSetter
 category: Category
 config: Config
 duplicate transient: DuplicateTransient
