@@ -23,7 +23,10 @@ insert [you] function [specifier] <user.ufunction_specifiers>:
 state log [{user.unreal_log_verbosity}]:
   user.insert_between("UE_LOG(LogTemp, {unreal_log_verbosity or 'Display'}, TEXT('", "'))")
 
-declare [{user.unreal_delegate_dynamic}] [{user.unreal_delegate_multicast}] [{user.unreal_delegate_param_count} [(parameters|param)]] delegate: 
+declare log category:
+  user.insert_between("DECLARE_LOG_CATEGORY_EXTERN(Log", ", Log, All")
+
+declare [{user.unreal_delegate_dynamic}] [{user.unreal_delegate_multicast}] delegate [{user.unreal_delegate_param_count} [(parameters|param)]]: 
   insert("DECLARE")
   insert(unreal_delegate_dynamic or '')
   insert(unreal_delegate_multicast or '')
