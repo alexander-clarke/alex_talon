@@ -39,7 +39,10 @@ def uspecifiers_category(m) -> str:
 
 @mod.capture(rule="(<user.uspecifiers_category> | {user.unreal_uproperty_specifiers})")
 def uproperty_specifier(m) -> str:
-    return m.uspecifiers_category or m.unreal_uproperty_specifiers
+    try:
+        return m.uspecifiers_category
+    except AttributeError:
+        return m.unreal_uproperty_specifiers
 
 
 @mod.capture(rule="<user.uproperty_specifier>+")

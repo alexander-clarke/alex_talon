@@ -5,10 +5,10 @@ code.language: cpp
 state you property:
   insert("UPROPERTY(BlueprintReadWrite, EditAnywhere)")
 
-state you (property|prop) <user.uproperty_specifiers>:
+state you (property | prop) <user.uproperty_specifiers>:
   user.insert_between("UPROPERTY({uproperty_specifiers}", ")")
 
-insert [you] (property|prop) <user.uproperty_specifiers>:
+insert [you] (property | prop) <user.uproperty_specifiers>:
   user.smart_insert_specifiers(uproperty_specifiers)
 
 state read only you property:
@@ -16,7 +16,7 @@ state read only you property:
 
 state you function [<user.ufunction_specifiers>]:
   user.insert_between("UFUNCTION({ufunction_specifiers or ''}", ")")
-  
+
 insert [you] function [specifier] <user.ufunction_specifiers>:
   user.smart_insert_specifiers(ufunction_specifiers)
 
@@ -26,7 +26,7 @@ state log [{user.unreal_log_verbosity}]:
 declare log category:
   user.insert_between("DECLARE_LOG_CATEGORY_EXTERN(Log", ", Log, All")
 
-declare [{user.unreal_delegate_dynamic}] [{user.unreal_delegate_multicast}] delegate [{user.unreal_delegate_param_count} [(parameters|param)]]: 
+declare [{user.unreal_delegate_dynamic}] [{user.unreal_delegate_multicast}] delegate [{user.unreal_delegate_param_count} [(parameters | param)]]:
   insert("DECLARE")
   insert(unreal_delegate_dynamic or '')
   insert(unreal_delegate_multicast or '')
@@ -34,4 +34,4 @@ declare [{user.unreal_delegate_dynamic}] [{user.unreal_delegate_multicast}] dele
   insert(unreal_delegate_param_count or '')
   user.insert_between("(F", ")")
 
-{user.ue_types}: "{ue_types}" 
+{user.ue_types}: "{ue_types}"
