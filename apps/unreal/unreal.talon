@@ -19,14 +19,14 @@ simulate:
 
 breakpoint:
   key(f9)
-  
+
 step into:
-  key(f11)  
+  key(f11)
 
 step over:
   key(f10)
 
-tab close [major]: 
+tab close [major]:
   key(ctrl-f4)
 
 # not default shortcut
@@ -55,11 +55,11 @@ open level:
 
 toggle coordinate [space]: key(ctrl-`)
 
-(reference viewer|go usage): key(alt-shift-r)
+(reference viewer | go usage): key(alt-shift-r)
 
 size map: key(alt-shift-m)
 
-(commandline|console) [open]: key(`)  
+(commandline | console) [open]: key(`)
 
 actor to level: key(ctrl-m)
 level to actor: key(m)
@@ -68,7 +68,7 @@ build lighting: key(ctrl-shift-;)
 
 select all of class: key(ctrl-shift-a)
 
-prefix {user.unreal_prefixes}: insert(user.unreal_prefixes)
+prefix {user.unreal_prefixes}: insert(unreal_prefixes)
 
 # views
 view perspective: key(alt-g)
@@ -95,7 +95,7 @@ switch workflow: key(alt-o)
   sleep(100ms)
   insert(phrase or "")
 
-(node new|make node) [<phrase>]: 
+(node new | make node) [<phrase>]:
   key(tab)
   sleep(100ms)
   insert(phrase or "")
@@ -105,13 +105,13 @@ node replace:
 
 [toggle] context sensitive: key(ctrl-t)
 
-(link to pin|pin (connect|link)): key(ctrl-shift-q)
-((link (in|to) wire)|(node (connect|link))): key(ctrl-q)
-(connect|link) menu: key(ctrl-l)
+(link to pin | pin (connect | link)): key(ctrl-shift-q)
+((link (in | to) wire) | (node (connect | link))): key(ctrl-q)
+(connect | link) menu: key(ctrl-l)
 
-[node] (chuck|delete) [and] keep: key(shift-delete)
+[node] (chuck | delete) [and] keep: key(shift-delete)
 
-[node] toggle (purity|pure): key(shift-alt-g)
+[node] toggle (purity | pure): key(shift-alt-g)
 [node] toggle [advanced] display: key(alt-ctrl-a)
 
 node disconnect: key(ctrl-d)

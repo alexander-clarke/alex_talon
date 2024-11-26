@@ -25,10 +25,10 @@ mod.list("unreal_ufunction_specifiers", desc="Unreal function specifiers")
 mod.list("unreal_uproperty_specifiers", desc="Unreal uproperty specifiers")
 
 
-@mod.capture(rule="{user.unreal_ufunction_specifiers}+")
+@mod.capture(rule="<user.ufunction_specifier>+")
 def ufunction_specifiers(m) -> str:
     """A sequence of unreal engine ufunction specifiers"""
-    return ", ".join(m.unreal_ufunction_specifiers_list)
+    return ", ".join(m.ufunction_specifier_list)
 
 
 @mod.capture(rule="Cat <user.text>")
@@ -43,6 +43,14 @@ def uproperty_specifier(m) -> str:
         return m.uspecifiers_category
     except AttributeError:
         return m.unreal_uproperty_specifiers
+
+
+@mod.capture(rule="(<user.uspecifiers_category> | {user.unreal_ufunction_specifiers})")
+def ufunction_specifier(m) -> str:
+    try:
+        return m.uspecifiers_category
+    except AttributeError:
+        return m.unreal_ufunction_specifiers
 
 
 @mod.capture(rule="<user.uproperty_specifier>+")

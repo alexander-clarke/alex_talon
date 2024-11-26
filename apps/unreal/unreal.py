@@ -23,26 +23,6 @@ app: unreal
 
 mod.list("unreal_prefixes", desc="class name prefixes")
 
-ctx.lists["user.unreal_prefixes"] = {
-    "blueprint": "BP_",
-    "widget blueprint": "WBP_",
-    "animation blueprint": "ABP_",
-    "behavior tree": "BT_",
-    "static mesh": "SM_",
-    "skeletal mesh": "SK_",
-    "texture": "T_",
-    "material instance": "MI_",
-    "material": "M_",
-    # nonstandard
-    "material function": "MF_",
-    "Niagara system": "NS_",
-    "curve vector": "CV_",
-    "curve float": "CF_",
-    "editor utility": "EU_",
-    # project specific
-    "ziggy dialog tree": "ZDT_",
-}
-
 
 @mod.action_class
 class Actions:

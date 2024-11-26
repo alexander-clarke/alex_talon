@@ -11,13 +11,10 @@ state you (property | prop) <user.uproperty_specifiers>:
 insert [you] (property | prop) <user.uproperty_specifiers>:
   user.smart_insert_specifiers(uproperty_specifiers)
 
-state read only you property:
-  insert("UPROPERTY(BlueprintReadOnly, VisibleAnywhere)")
-
-state you function [<user.ufunction_specifiers>]:
+state you (function | funk) [<user.ufunction_specifiers>]:
   user.insert_between("UFUNCTION({ufunction_specifiers or ''}", ")")
 
-insert [you] function [specifier] <user.ufunction_specifiers>:
+insert [you] (function | funk) [specifier] <user.ufunction_specifiers>:
   user.smart_insert_specifiers(ufunction_specifiers)
 
 state log [{user.unreal_log_verbosity}]:

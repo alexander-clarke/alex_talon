@@ -1,0 +1,24 @@
+list: user.unreal_prefixes
+-
+
+blueprint: BP_
+widget blueprint: WBP_
+animation blueprint: ABP_
+behavior tree: BT_
+static mesh: SM_
+skeletal mesh: SK_
+texture: T_
+material instance: MI_
+material: M_
+# nonstandard
+structure: S_
+enum: E_
+material function: MF_
+Niagara system: NS_
+curve vector: CV_
+curve float: CF_
+editor utility: EU_
+# project specific
+ziggy dialog tree: ZDT_
+level data object: LDO_
+level set: LS_
