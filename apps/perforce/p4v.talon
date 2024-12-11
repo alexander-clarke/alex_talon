@@ -12,3 +12,4 @@ file diff settings: key(ctrl-shift-d)
 submit: key(ctrl-s)
 
 p for update: key(ctrl-shift-g)
+p for submit: key(ctrl-s)

@@ -95,10 +95,10 @@ switch workflow: key(alt-o)
   sleep(100ms)
   insert(phrase or "")
 
-(node new | make node) [<phrase>]:
+(node new | make node) [<user.text>]:
   key(tab)
   sleep(100ms)
-  insert(phrase or "")
+  insert(text or "")
 
 node replace:
   key(ctrl-h)
