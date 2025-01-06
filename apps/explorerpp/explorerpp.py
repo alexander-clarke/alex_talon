@@ -1,4 +1,4 @@
-from talon import Module, Context
+from talon import Module, Context, actions
 
 mod = Module()
 
@@ -10,8 +10,15 @@ and app.exe: /^explorer\+\+\.exe$/i
 """
 
 ctx = Context()
+ctx.matches = r"""
+app: explorerpp
+os: windows
+"""
 
 
-@mod.action_class
-class FileManager:
-    pass
+@ctx.action_class("user")
+class Actions:
+    def file_manager_terminal_here():
+        actions.user.system_command_nb(
+            f"wt.exe -d {actions.user.file_manager_current_path()}"
+        )

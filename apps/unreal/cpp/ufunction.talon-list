@@ -1,21 +1,31 @@
 list: user.unreal_ufunction_specifiers
 -
+
 callable: BlueprintCallable
 blueprint callable: BlueprintCallable
+
 pure: BlueprintPure
 blueprint pure: BlueprintPure
+
 cosmetic: BlueprintCosmetic
 blueprint cosmetic: BlueprintCosmetic
+
 implementable: BlueprintImplementableEvent
 blueprint implementable: BlueprintImplementableEvent
 implementable event: BlueprintImplementableEvent
 blueprint implementable event: BlueprintImplementableEvent
+
 authority: BlueprintAuthorityOnly
 blueprint authority: BlueprintAuthorityOnly
+
 native: BlueprintNativeEvent
 blueprint native: BlueprintNativeEvent
 native event: BlueprintNativeEvent
 blueprint native event: BlueprintNativeEvent
+
+call in editor: CallInEditor
+editor: CallInEditor
+
 Client
 Server
 Category
