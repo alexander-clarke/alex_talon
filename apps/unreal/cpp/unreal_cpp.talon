@@ -18,7 +18,7 @@ insert [you] (function | funk) [specifier] <user.ufunction_specifiers>:
   user.smart_insert_specifiers(ufunction_specifiers)
 
 state log [{user.unreal_log_verbosity}]:
-  user.insert_between("UE_LOG(LogTemp, {unreal_log_verbosity or 'Display'}, TEXT('", "'))")
+  user.insert_between('UE_LOG(LogTemp, {unreal_log_verbosity or "Display"}, TEXT("', '"))')
 
 declare log category:
   user.insert_between("DECLARE_LOG_CATEGORY_EXTERN(Log", ", Log, All")
