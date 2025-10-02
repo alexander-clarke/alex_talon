@@ -34,3 +34,5 @@ Reliable
 Unreliable
 CustomThunk
 Exec
+
+world context:'meta=(WorldContext="WorldContextObject")'

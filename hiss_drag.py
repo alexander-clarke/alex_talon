@@ -46,8 +46,8 @@ def cursor_drag_on_hiss(is_active):
       global start
       global running
       global threshold_passed
+      global hiss_release_threshold_passed
       if is_active:
-          print("Start Hiss")
           if 0 in ctrl.mouse_buttons_down():
             ctrl.mouse_click(button=0, up=True)
           else:
@@ -56,7 +56,7 @@ def cursor_drag_on_hiss(is_active):
               start = time()
               running = True
               cron.after(noise_length_threshold, still_running)
-              cron.after(hiss_release_threshold_passed, still_running_hiss_release_threshold)
+              cron.after(hiss_release_threshold, still_running_hiss_release_threshold)
       else:
           running = False
           if hiss_release_threshold_passed:

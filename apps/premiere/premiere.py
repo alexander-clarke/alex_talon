@@ -25,20 +25,12 @@ app: adobe_premiere_pro
 class Action:
   def feet_moving():
     """"""
-    # tags =[]
-    tags = list(ctx.tags)
-    # print(tags)
-    if "user.feet_cutting" in tags:
-      tags.remove("user.feet_cutting")
-    if "user.feet_moving" not in tags:
-      tags.append("user.feet_moving")
-    # print(tags)
-    ctx.tags =tags
+    ctx.tags = ["user.feet_moving"]
 
   def feet_cutting():
     """"""
-    ctx.tags.remove("user.feet_moving")
-    ctx.tags += "user.feet_cutting"
+    ctx.tags = ["user.feet_cutting"]
+    
 
 @mod.action_class
 class Action:

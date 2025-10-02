@@ -21,6 +21,6 @@ audio (out|output) bows:
   user.audio_default_switch("Bose Output")
 
 audio (out|output) (surround|flat): 
-  user.audio_default_switch("Speakers")  
+  user.audio_default_switch("Surround Sound")  
 
 audio input road: user.audio_default_switch("Rode Wireless Mic")
