@@ -10,6 +10,7 @@ currently_connected = False
 class audio_switcher:
   def audio_default_switch(new_default: str):
     """"""
+    print(new_default)
     actions.user.system_command(f'"G:\\Program Files\\nircmd\\nircmd.exe" setdefaultsounddevice "{new_default}" 1')
     actions.user.system_command(f'"G:\\Program Files\\nircmd\\nircmd.exe" setdefaultsounddevice "{new_default}" 2')
     
@@ -22,10 +23,10 @@ def devices_changed(device_type):
   devices = [
     dev.name for dev in ctx.inputs() if dev.state == cubeb.DeviceState.ENABLED
   ]
-  print(devices)
+  # print(devices)
 
   if "Wired Mic Interface (Audient EVO4)" in devices:
-    print("Wired interface in device list")
+    # print("Wired interface in device list")
     if not currently_connected:
       print("Launching evo to fix weird audio interface bug")
       actions.user.system_command_nb(r"C:\Program Files\Audient\EVO\EVO.exe")
