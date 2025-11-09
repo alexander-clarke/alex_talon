@@ -1,0 +1,9 @@
+list: user.audio_devices
+hostname: DESKTOP-8N4MUU3
+-
+# out,in
+wireless: Wireless Headset Output,Wireless Headset Mic
+wired: Wired Interface Output,Wired Mic Interface
+index: Index Headset Output,Index Headset Mic
+bows: Bose output
+flat: Surround Sound
