@@ -1,0 +1,7 @@
+list: user.audio_devices
+hostname: AlexLaptop
+-
+# out,in
+shocks: Headphones,Headset Microphone
+built in: Speakers,Microphone Array
+fairphone: FairphoneBuds,FairphoneMic
