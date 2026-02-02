@@ -7,51 +7,52 @@ app: unreal
 tag(): user.unreal_commands
 
 file hunt [<user.text>]:
-  user.find_file(text or "")
-  # key(ctrl-p)
-  # insert(text or "")
+    user.find_file(text or "")
+    # key(ctrl-p)
+    # insert(text or "")
 
 launch on device:
-  key(alt-shift-p)
+    key(alt-shift-p)
 
 simulate:
-  key(alt-s)
+    key(alt-s)
 
 breakpoint:
-  key(f9)
+    key(f9)
 
 step into:
-  key(f11)
+    key(f11)
 
 step over:
-  key(f10)
+    key(f10)
 
 tab close [major]:
-  key(ctrl-f4)
+    key(ctrl-f4)
 
 # not default shortcut
 tab close minor:
-  key(ctrl-shift-f4)
+    key(ctrl-shift-f4)
 
 browse [to]:
-  key(ctrl-b)
+    key(ctrl-b)
 
 duplicate:
-  key(ctrl-w)
+    #   key(ctrl-w) # Old duplicate key in unreal engine 4
+    key(ctrl-d)
 
 blueprint open:
-  key(ctrl-e)
+    key(ctrl-e)
 
 rename:
-  key(f2)
+    key(f2)
 
 save all:
-  key(ctrl-shift-s)
-  sleep(200ms)
-  key(ctrl-s)
+    key(ctrl-shift-s)
+    sleep(200ms)
+    key(ctrl-s)
 
 open level:
-  key(ctrl-o)
+    key(ctrl-o)
 
 toggle coordinate [space]: key(ctrl-`)
 
@@ -60,6 +61,10 @@ toggle coordinate [space]: key(ctrl-`)
 size map: key(alt-shift-m)
 
 (commandline | console) [open]: key(`)
+
+screenshot:
+    key(`)
+    insert("HighResShot 3840x2160\n")
 
 actor to level: key(ctrl-m)
 level to actor: key(m)
@@ -91,17 +96,17 @@ open window: key(ctrl-shift-k)
 switch workflow: key(alt-o)
 
 [<phrase>] [search] hunt:
-  key(ctrl-alt-f)
-  sleep(100ms)
-  insert(phrase or "")
+    key(ctrl-alt-f)
+    sleep(100ms)
+    insert(phrase or "")
 
 (node new | make node) [<user.text>]:
-  key(tab)
-  sleep(100ms)
-  insert(text or "")
+    key(tab)
+    sleep(100ms)
+    insert(text or "")
 
 node replace:
-  key(ctrl-h)
+    key(ctrl-h)
 
 [toggle] context sensitive: key(ctrl-t)
 
@@ -149,16 +154,16 @@ swap <user.arrow_keys>: user.arrow_key_sequence_with_modifiers(arrow_keys, "ctrl
 
 # material editor
 material vector:
-  key(3:down)
-  sleep(200ms)
-  mouse_click(0)
-  key(3:up)
+    key(3:down)
+    sleep(200ms)
+    mouse_click(0)
+    key(3:up)
 
 material scalar:
-  key(1:down)
-  sleep(200ms)
-  mouse_click(0)
-  key(1:up)
+    key(1:down)
+    sleep(200ms)
+    mouse_click(0)
+    key(1:up)
 
 escape repeater:
-  key(escape:500)
+    key(escape:500)
