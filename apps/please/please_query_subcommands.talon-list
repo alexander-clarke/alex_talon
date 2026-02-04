@@ -1,0 +1,13 @@
+list: user.please_query_subcommands
+-
+
+targets: "alltargets"
+filter: "filter"
+changes: "changes"
+deps: "deps"
+graph: "graph"
+input: "input"
+output: "output"
+reverse: "reverseDeps"
+path: "somepath"
+rules: "rules"

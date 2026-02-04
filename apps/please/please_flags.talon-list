@@ -1,0 +1,14 @@
+list: user.please_common_flags
+-
+
+config: -c
+repo root: -r
+threads: -n
+include: -i
+exclude: -e
+arch: -a
+override: -o
+profile: --profile
+verbose: -v
+dry run: --noupdate
+force: --rerun

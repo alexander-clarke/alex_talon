@@ -1,0 +1,20 @@
+list: user.please_commands
+-
+
+build: build
+test: test
+cover: cover
+run: run
+execute: exec
+watch: watch
+query: query
+clean: clean
+hash: hash
+format: fmt
+init: init
+generate: generate
+update: update
+export: export
+garbage collect: gc
+help: help
+redo: op
