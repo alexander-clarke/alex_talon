@@ -1,4 +1,4 @@
-from talon import Module, app, actions, Context
+from talon import Module, app, actions, Context, settings
 from talon.lib import cubeb
 
 mod = Module()
@@ -8,16 +8,37 @@ currently_connected = False
 
 mod.list("audio_devices", desc="")
 
+mod.setting(
+  "nircmd_path",
+  type = str,
+  default = "G:\\Program Files\\nircmd\\nircmd.exe",
+  desc = "Path to call nircmd"  
+ )
+
 @mod.action_class
-class audio_switcher:
+class AudioDevices:
   def audio_default_switch(new_default: str):
     """"""
     print(new_default)
-    actions.user.system_command(f'"G:\\Program Files\\nircmd\\nircmd.exe" setdefaultsounddevice "{new_default}" 1')
-    actions.user.system_command(f'"G:\\Program Files\\nircmd\\nircmd.exe" setdefaultsounddevice "{new_default}" 2')
+    print(settings.get("user.nircmd_path"))
+    print(actions.user.system_command(f'"{settings.get("user.nircmd_path")}" setdefaultsounddevice "{new_default}" 1'))
+    actions.user.system_command(f'"{settings.get( "user.nircmd_path")}" setdefaultsounddevice "{new_default}" 2')
     
     # https://www.nirsoft.net/articles/set_default_audio_device_command_line.html
     # http://www.nirsoft.net/utils/nircmd.html
+
+  def audio_set_default_in(audio_list_item: str):
+    """"""
+    actions.user.audio_default_switch(audio_list_item.split(',')[1])
+
+  def audio_set_default_out(audio_list_item: str):
+    """"""
+    actions.user.audio_default_switch(audio_list_item.split(',')[0])
+
+  def audio_set_default_in_out(audio_list_item: str):
+    """"""
+    actions.user.audio_set_default_out(audio_list_item)
+    actions.user.audio_set_default_in(audio_list_item)
 
 def devices_changed(device_type):
   global currently_connected
@@ -38,18 +59,5 @@ def devices_changed(device_type):
 
 def on_ready():
   ctx.register("devices_changed", devices_changed)
-
-def audio_set_default_in(audio_list_item: str):
-  ''''''
-  audio_default_switch(audio_list_item.split(',')[1])
-
-def audio_set_default_out(audio_list_item: str):
-  ''''''
-  audio_default_switch(audio_list_item.split(',')[0])
-
-def audio_set_default_in_out(audio_list_item: str):
-  ''''''
-  audio_set_default_out(audio_list_item)
-  audio_set_default_in(audio_list_item)
 
 app.register("ready", on_ready)
