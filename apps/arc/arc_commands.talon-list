@@ -1,0 +1,7 @@
+list: user.arc_commands
+-
+
+diff: "diff\n"
+work
+lint: "lint\n"
+test: "test\n"
