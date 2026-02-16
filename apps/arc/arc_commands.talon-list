@@ -4,4 +4,7 @@ list: user.arc_commands
 diff: "diff\n"
 work
 lint: "lint\n"
-test: "test\n"
+unit: "unit\n"
+help: "help\n"
+patch: "patch"
+branch: "branch"

@@ -1,6 +1,6 @@
 tag: terminal
 -
 
-arc {user.arc_commands}:
+arc [{user.arc_commands}]:
     "arc "
-    insert(user.arc_commands)
+    insert(user.arc_commands or "")

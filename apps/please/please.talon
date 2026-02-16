@@ -7,6 +7,9 @@ please {user.please_commands}:
     insert(user.please_commands)
     " "
 
+please:
+    "plz "
+
 # Nested subcommands: "please query deps", "please query graph"
 please query {user.please_query_subcommands}:
     insert("plz query ")
