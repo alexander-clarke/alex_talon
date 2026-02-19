@@ -2,9 +2,9 @@ list: user.arc_commands
 -
 
 diff: "diff\n"
-work
+work: "work "
 lint: "lint\n"
 unit: "unit\n"
 help: "help\n"
-patch: "patch"
+patch: "patch "
 branch: "branch"
