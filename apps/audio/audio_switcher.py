@@ -21,8 +21,12 @@ class AudioDevices:
     def audio_default_switch(new_default: str):
         """"""
         print("Switching audio to: " + new_default)
+
         actions.user.system_command(
             f'"{settings.get( "user.nircmd_path")}" setdefaultsounddevice "{new_default}" 2'
+        )
+        actions.user.system_command(
+            f'"{settings.get( "user.nircmd_path")}" setdefaultsounddevice "{new_default}" 1'
         )
 
         # https://www.nirsoft.net/articles/set_default_audio_device_command_line.html
