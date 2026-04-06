@@ -1,5 +1,6 @@
 # script to shutdown talon on Windows
-os: windows
+# os: windows
+
 -
 
 talon exit: user.talon_shutdown()
