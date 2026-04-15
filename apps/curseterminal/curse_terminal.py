@@ -46,6 +46,7 @@ _TERMINAL_ACTIONS = {
     "copyToClipboard",
     "cutToClipboard",
 }
+
 _TERMINAL_MODIFIERS = {
     "word",
     "wordLeft",
@@ -105,6 +106,9 @@ class AppActions:
 
     def tab_previous():
         actions.user.run_rpc_command("terminal-prev-tab")
+
+    def window_close():
+        actions.user.run_rpc_command("terminal-close-window")
 
 
 @ctx.action_class("user")
