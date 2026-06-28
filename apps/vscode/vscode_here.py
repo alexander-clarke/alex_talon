@@ -8,19 +8,19 @@ class Actions:
     def vscode_here():
         """Opens VS Code in the current file manager folder"""
         actions.user.system_command_nb(
-            f"code \"{actions.user.file_manager_current_path()}\""
+            f'code "{actions.user.file_manager_current_path()}"'
         )
 
     def vscode_open(path: str):
         """Opens a relative path in VS Code from the current file manager folder"""
         base = actions.user.file_manager_current_path()
         target = f"{base}\\{path}" if path else base
-        actions.user.system_command_nb(f"code \"{target}\"")
+        actions.user.system_command_nb(f'code "{target}"')
 
 
 ctx_terminal = Context()
 ctx_terminal.matches = r"""
-tag: user.terminal
+tag: terminal
 """
 
 
