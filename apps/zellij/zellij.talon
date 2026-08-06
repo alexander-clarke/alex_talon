@@ -20,15 +20,18 @@ rename tab <user.text>:
     insert(user.text)
     key(enter)
 
-pane right: key(alt-right)
-pane left: key(alt-left)
-pane up: key(alt-up)
-pane down: key(alt-down)
+pane <user.arrow_key>: key("alt-{arrow_key}")
+move pane <user.arrow_key>: key("ctrl-h {arrow_key} esc")
+toggle frames: key(ctrl-p z)
+embed pane: key(ctrl-p e)
 
-resize right: key(ctrl-n right esc)
-resize left: key(ctrl-n left esc)
-resize up: key(ctrl-n up esc)
-resize down: key(ctrl-n down esc)
+resize <user.arrow_key>: key("ctrl-n {arrow_key} esc")
+
+tab move left: key(ctrl-t [)
+tab move right: key(ctrl-t ])
+tab sync: key(ctrl-t s)
+
+edit scrollback: key(ctrl-s e)
 
 session new: key(ctrl-o n)
 session switch: key(ctrl-o w)

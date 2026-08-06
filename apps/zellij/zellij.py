@@ -29,6 +29,7 @@ class Actions:
 
 @ctx.action_class("app")
 class AppActions:
+    # Implementing app tab actions
     def tab_open():
         actions.key("ctrl-t n")
 
@@ -44,18 +45,21 @@ class AppActions:
 
 @ctx.action_class("user")
 class UserActions:
-    # right/left/up/down navigate between panes
+    # -------------------------------------------------------------------------
+    # Implementing user.splits tag
+    # -------------------------------------------------------------------------
+    # right/left/up/down create new panes in that direction
     def split_window_right():
-        actions.key("alt-right")
+        actions.key("ctrl-p r")
 
     def split_window_left():
-        actions.key("alt-left")
+        actions.key("ctrl-p l")
 
     def split_window_up():
-        actions.key("alt-up")
+        actions.key("ctrl-p u")
 
     def split_window_down():
-        actions.key("alt-down")
+        actions.key("ctrl-p d")
 
     # vertically/horizontally create new panes
     def split_window_vertically():
@@ -80,17 +84,20 @@ class UserActions:
         actions.key("ctrl-p x")
 
     def split_clear_all():
-        pass
+        actions.key("ctrl-p o")
 
     def split_flip():
-        pass
+        actions.key("ctrl-p s")
 
     def split_reset():
-        pass
+        actions.key("ctrl-p =")
 
     def split_number(index: int):
-        pass  # no default Zellij binding
+        pass  # no direct index jump binding in standard Zellij
 
+    # -------------------------------------------------------------------------
+    # Implementing user.tabs tag
+    # -------------------------------------------------------------------------
     def tab_close_wrapper():
         actions.app.tab_close()
 
@@ -100,11 +107,16 @@ class UserActions:
         actions.key(str(number))
 
     def tab_final():
-        pass  # no default Zellij binding
+        actions.key("ctrl-t 1")
+        actions.sleep("50ms")
+        actions.key("ctrl-t left")
 
     def tab_duplicate():
-        pass  # not supported
+        actions.insert("zellij action dump-layout > /tmp/zellij_tab_layout.kdl && zellij action new-tab --layout /tmp/zellij_tab_layout.kdl\n")
 
+    # -------------------------------------------------------------------------
+    # Implementing custom Zellij actions
+    # -------------------------------------------------------------------------
     def zellij_enter_scroll():
         actions.key("ctrl-s")
         scroll_ctx.tags = ["user.zellij_scroll"]
