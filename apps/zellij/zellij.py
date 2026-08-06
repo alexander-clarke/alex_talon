@@ -10,6 +10,7 @@ win.title: /zellij/i
 ctx = Context()
 ctx.matches = """
 app: zellij
+win.title: /zellij/i
 """
 ctx.tags = ["user.splits", "user.tabs", "terminal"]
 
@@ -32,10 +33,10 @@ class AppActions:
         actions.key("ctrl-t n")
 
     def tab_next():
-        actions.key("alt-]")
+        actions.key("ctrl-t right esc")
 
     def tab_previous():
-        actions.key("alt-[")
+        actions.key("ctrl-t left esc")
 
     def tab_close():
         actions.key("ctrl-t x")
@@ -43,18 +44,20 @@ class AppActions:
 
 @ctx.action_class("user")
 class UserActions:
+    # right/left/up/down navigate between panes
     def split_window_right():
-        actions.key("ctrl-p r")
-
-    def split_window_down():
-        actions.key("ctrl-p d")
+        actions.key("alt-right")
 
     def split_window_left():
-        pass  # no default Zellij binding
+        actions.key("alt-left")
 
     def split_window_up():
-        pass  # no default Zellij binding
+        actions.key("alt-up")
 
+    def split_window_down():
+        actions.key("alt-down")
+
+    # vertically/horizontally create new panes
     def split_window_vertically():
         actions.key("ctrl-p r")
 

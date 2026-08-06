@@ -2,7 +2,7 @@ from talon import Context, Module
 
 mod = Module()
 mod.apps.gemini_cli = r"""
-win.title: /gemini/
+win.title: /gemini/i
 """
 
 mod.list("user.gemini_mcp_servers", desc="Gemini CLI MCP server names")
