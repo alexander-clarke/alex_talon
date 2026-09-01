@@ -31,7 +31,7 @@ tab move left: key(ctrl-t [)
 tab move right: key(ctrl-t ])
 tab sync: key(ctrl-t s)
 
-pane (edit | editor): key(ctrl-s e)
+(pane | scroll) (edit | editor): key(ctrl-s e)
 
 session new: key(ctrl-o n)
 session switch: key(ctrl-o w)
