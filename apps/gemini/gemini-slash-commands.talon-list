@@ -1,0 +1,16 @@
+list: user.slash_commands
+app: gemini_cli
+-
+clear
+copy
+compress
+compact: compress
+resume: chat resume
+chat list
+memory show
+memory refresh
+rewind
+plan
+shells
+stats
+settings

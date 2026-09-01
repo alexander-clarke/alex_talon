@@ -1,0 +1,39 @@
+list: user.slash_commands
+app: claude_cli
+-
+clear
+compact
+compress: compact
+context
+resume
+rewind
+status
+help
+cost
+login
+logout
+permissions
+diff
+doctor
+agents
+tasks
+exit
+init
+review
+memory
+config
+bug
+export
+usage
+hooks
+ide
+goal
+copy
+insights
+output style: output-style
+pr comments: pr-comments
+release notes: release-notes
+terminal setup: terminal-setup
+privacy settings: privacy-settings
+install github app: install-github-app
+migrate installer: migrate-installer
